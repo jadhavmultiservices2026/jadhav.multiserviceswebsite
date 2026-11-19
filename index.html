@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="mr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="जाधव मल्टी सर्विसेस, माकणी येथे आधार, पॅन कार्ड, मतदार ओळखपत्र, शासकीय दाखले, फॉर्म, झेरॉक्स आणि इतर ऑनलाइन सेवा." name="description"/>
+<title>जाधव मल्टी सर्विसेस | डिजिटल सेवा केंद्र माकणी</title>
+<style>
+    :root {
+      --navy: #12345a;
+      --blue: #1769aa;
+      --sky: #eaf5ff;
+      --gold: #f5b942;
+      --ink: #203044;
+      --muted: #62748a;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans Devanagari", "Mangal", "Arial", sans-serif;
+      color: var(--ink);
+      background: #f7fbff;
+      line-height: 1.65;
+    }
+    .topbar {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: .92rem;
+    }
+    header {
+      background: linear-gradient(125deg, #12345a, #1769aa);
+      color: white;
+      padding: 22px 20px 58px;
+    }
+    .nav, .hero, .section, footer {
+      width: min(1120px, calc(100% - 36px));
+      margin: auto;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+    .brand-wrap { display: flex; align-items: center; gap: 12px; }
+    .brand-logo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover;
+      background: white; border: 3px solid #f5b942; box-shadow: 0 3px 12px #071d3340; }
+    .brand { font-size: 1.2rem; font-weight: 800; letter-spacing: .2px; }
+    .hero-logo { width: min(190px, 48vw); aspect-ratio: 1; object-fit: cover;
+      border-radius: 50%; border: 5px solid #f5b942; background: white;
+      box-shadow: 0 8px 28px #071d3355; margin-bottom: 18px; }
+    .nav a {
+      color: white; text-decoration: none; font-weight: 700;
+      border: 1px solid #ffffff75; border-radius: 999px; padding: 8px 16px;
+    }
+    .hero { padding-top: 56px; text-align: center; }
+    .eyebrow {
+      display: inline-block; background: #ffffff20; border: 1px solid #ffffff55;
+      border-radius: 999px; padding: 5px 14px; font-size: .9rem;
+    }
+    h1 { font-size: clamp(2rem, 5vw, 3.35rem); line-height: 1.25; margin: 18px 0 12px; }
+    .hero p { color: #e4f2ff; max-width: 680px; margin: 0 auto 25px; font-size: 1.08rem; }
+    .primary {
+      display: inline-block; background: var(--gold); color: #252525;
+      padding: 11px 23px; border-radius: 8px; font-weight: 800;
+      text-decoration: none; box-shadow: 0 5px 15px #071d3328;
+    }
+    .section { padding: 54px 0; }
+    .section-heading { text-align: center; margin-bottom: 28px; }
+    .section-heading h2 { color: var(--navy); font-size: clamp(1.55rem, 3vw, 2.1rem); margin: 0 0 7px; }
+    .section-heading p { color: var(--muted); margin: 0; }
+    .grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px;
+    }
+    .service {
+      background: white; border: 1px solid #e2edf7; border-radius: 14px;
+      padding: 20px; display: flex; align-items: center; gap: 14px;
+      box-shadow: 0 6px 20px #153b5b0a; min-height: 88px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .service:hover { transform: translateY(-3px); box-shadow: 0 10px 24px #153b5b16; }
+    .number {
+      flex: 0 0 42px; height: 42px; display: grid; place-items: center;
+      border-radius: 12px; background: var(--sky); color: var(--blue); font-weight: 800;
+    }
+    .service { flex-direction: column; align-items: stretch; padding: 0; overflow: hidden; gap: 0; }
+    .service-art { display: grid; place-items: center; height: 135px; color: var(--art-color); background: color-mix(in srgb, var(--art-color) 10%, white); }
+    .service-art svg { width: 94px; height: 94px; filter: drop-shadow(0 4px 5px #12345a14); }
+    .service-info { display: flex; align-items: center; gap: 12px; padding: 16px; flex: 1; }
+    .service h3 { margin: 0; font-size: 1.02rem; color: var(--navy); }
+    .info {
+      background: var(--sky); border-top: 1px solid #d8eafa; border-bottom: 1px solid #d8eafa;
+    }
+    .info-inner {
+      width: min(900px, calc(100% - 36px)); margin: auto; padding: 38px 0;
+      text-align: center;
+    }
+    .info h2 { color: var(--navy); margin: 0 0 8px; }
+    .info p { margin: 0; color: var(--muted); }
+    .contact-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px; margin: 25px 0;
+    }
+    .contact-card {
+      background: white; border: 1px solid #d8eafa; border-radius: 12px;
+      padding: 16px; display: flex; flex-direction: column; gap: 5px;
+      overflow-wrap: anywhere;
+    }
+    .contact-card strong { color: var(--navy); }
+    .contact-card a { color: var(--blue); text-decoration: none; font-weight: 700; }
+    .contact-button { margin-top: 5px; }
+    footer { padding: 25px 0; text-align: center; color: var(--muted); font-size: .92rem; }
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      header { padding-bottom: 44px; }
+      .hero { padding-top: 42px; }
+    }
+    @media (max-width: 500px) {
+      .grid { grid-template-columns: 1fr; gap: 12px; }
+      .nav { align-items: flex-start; }
+      .brand { max-width: 190px; line-height: 1.35; }
+      .brand-logo { width: 52px; height: 52px; }
+      .nav a { white-space: nowrap; font-size: .9rem; }
+      .section { padding: 40px 0; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  
+.service-link { text-decoration:none; cursor:pointer; }
+.service-link:focus-visible,.docs-link:focus-visible,.docs-close:focus-visible {outline:3px solid #f5b942;outline-offset:3px}
+.service-info {flex-wrap:wrap}
+.docs-link {display:block;flex-basis:100%;color:#1769aa;font-size:.91rem;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.docs-panel {display:none;padding:17px 18px 20px;background:#f1f8ff;border-top:1px solid #d6e9fa}
+.docs-panel:target {display:block}
+.docs-panel h4 {margin:0 0 10px;color:#12345a;font-size:1rem}
+.docs-panel ul {margin:0;padding-left:22px}
+.docs-panel li {margin-bottom:6px}
+.docs-note {font-size:.78rem;color:#596e83;margin:12px 0 10px}
+.docs-close {color:#155b9b;font-weight:700;text-decoration:none}
+
+/* Recruitment and form alerts */
+.updates-section{padding:56px 0;background:linear-gradient(180deg,#f0f7ff,#fff)}
+.updates-wrap{max-width:1120px;margin:auto;padding:0 18px}
+.updates-title{text-align:center;margin-bottom:24px}
+.updates-title h2{color:#12345a;margin:0 0 6px;font-size:clamp(1.5rem,3vw,2.2rem)}
+.updates-title p{color:#62748a;margin:0}
+.updates-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.update-card{background:#fff;border:1px solid #dae9f7;border-radius:16px;overflow:hidden;box-shadow:0 6px 22px #12345a12;display:flex;flex-direction:column}
+.update-visual{height:150px;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--a),var(--b))}
+.update-visual:before,.update-visual:after{content:'';position:absolute;width:180px;height:180px;border:2px solid #ffffff38;border-radius:50%;right:-65px;top:-80px}
+.update-visual:after{width:115px;height:115px;left:-50px;top:auto;bottom:-55px}
+.update-visual svg{height:86px;width:86px;stroke:white;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;z-index:1}
+.update-content{padding:19px;display:flex;flex:1;flex-direction:column;gap:9px}
+.update-content h3{color:#12345a;font-size:1.08rem;margin:0}
+.update-content p{font-size:.9rem;color:#52677d;margin:0;flex:1}
+.update-content a{display:inline-block;align-self:flex-start;color:#075fa7;font-weight:800;text-decoration:none;border-bottom:2px solid #9bc8ed}
+.updates-disclaimer{font-size:.83rem;color:#62748a;text-align:center;margin:22px auto 0;max-width:780px}
+@media(max-width:780px){.updates-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.updates-grid{grid-template-columns:1fr}.update-visual{height:120px}}
+.nav{flex-wrap:wrap}.nav a{font-size:.9rem}
+#latest-updates .updates-shell{max-width:1050px;margin:auto;background:white;border:1px solid #dceaf5;border-radius:18px;padding:22px;box-shadow:0 8px 24px #153b5b0b}
+.updates-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.live-label{font-weight:800;color:#12345a;display:inline-flex;align-items:center;gap:8px}
+.pulse-dot{width:9px;height:9px;border-radius:50%;background:#15936e;display:inline-block}
+#updates-timestamp{font-size:.83rem;color:#62748a}
+#refresh-updates{background:#1769aa;color:white;border:0;border-radius:8px;padding:8px 13px;cursor:pointer;font:inherit}
+.updates-filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px}
+.updates-filters .filter{border:1px solid #cddfed;background:#f4f9ff;border-radius:999px;padding:7px 14px;cursor:pointer;color:#12345a;font:inherit}
+.updates-filters .filter.active{background:#1769aa;color:white;border-color:#1769aa}
+.updates-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}
+.update-card{border:1px solid #dceaf5;border-radius:13px;padding:17px;background:#fbfdff}
+.update-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.update-icon{display:grid;place-items:center;background:#eaf5ff;width:50px;height:50px;border-radius:12px;font-size:1.6rem;flex:none}
+.update-category{font-size:.75rem;font-weight:700;color:#1769aa}
+.update-card h3{font-size:1rem;color:#12345a;margin:2px 0 0;line-height:1.4}
+.update-card p{margin:8px 0;font-size:.89rem;color:#52677c}
+.update-meta{font-size:.8rem;color:#52677c;margin-top:10px}
+.updates-empty{grid-column:1/-1;text-align:center;background:#f4f9ff;border-radius:12px;padding:28px 14px;color:#52677c}
+.updates-disclaimer{font-size:.78rem;color:#62748a;margin:18px 0 0}
+
+/* Government-inspired saffron / white / green redesign; independent business, not a government website. */
+:root{--navy:#183d31;--blue:#146b46;--sky:#eef8f1;--gold:#ffbf56;--ink:#26392e;--muted:#65756b}
+body{background:#f7faf6;color:#26392e}
+.topbar{background:#f47b20;color:#fff;font-weight:750;letter-spacing:.15px}
+header{background:linear-gradient(135deg,#fff7e9 0%,#ffffff 50%,#e8f7ed 100%);color:#183d31;border-bottom:5px solid #18854c;padding-bottom:58px;position:relative;overflow:hidden}
+header:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#f47b20 0 33.3%,#fff 33.3% 66.6%,#138b4e 66.6%)}
+.nav{position:relative;display:flex;align-items:center;gap:18px;padding-top:8px;flex-wrap:wrap}
+.nav .brand-wrap{margin-right:auto}
+.nav a{color:#23523a;border:1px solid #c9decf;background:#ffffffd9;padding:9px 15px}
+.nav a:hover{background:#e5f3e8}
+.brand-logo{width:65px;height:65px;border-color:#f7a841}
+.brand{color:#16442e;font-size:1.26rem}
+.hero{padding-top:37px;position:relative}
+.hero-logo{width:min(145px,40vw);border-color:#f5b84c;box-shadow:0 10px 28px #316e4c24}
+.gov-style-tag{display:inline-block;background:#fff2df;color:#a04c13;border:1px solid #f6d7ae;border-radius:99px;font-weight:800;padding:6px 16px;margin-bottom:14px}
+.eyebrow{background:#eaf7ef;color:#247349;border-color:#c9e8d3}
+h1{color:#16452f;font-size:clamp(2.25rem,5vw,3.6rem);margin:15px 0}
+.hero p{color:#526b5b}
+.primary{background:#f47b20;color:#fff;box-shadow:0 6px 15px #f47b2026}
+.primary:hover{background:#d96410}
+.section{padding-top:66px;padding-bottom:66px}
+.section-heading h2{color:#1a5436}
+.section-heading:after{content:"";display:block;width:92px;height:4px;background:linear-gradient(90deg,#ef8026 0 50%,#16864b 50%);border-radius:4px;margin:15px auto 0}
+.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.service{display:flex;flex-direction:column;align-items:stretch;min-height:245px;padding:0;border-radius:17px;overflow:hidden;border:1px solid #e1e9df;box-shadow:0 6px 20px #163a260d;background:#fff}
+.service-art{width:100%;min-height:132px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#fff6e9,#eff9f2);border-radius:0;border-bottom:1px solid #e9ece3}
+.service-art svg{height:82px;width:82px;max-width:45%;color:var(--art-color,#16864b)}
+.service-info{padding:15px 16px 18px;display:flex;align-items:center;gap:8px}
+.service-info h3{font-size:1rem;color:#234735;flex:1}
+.number{background:#fef0df;color:#a65318;flex-basis:34px;width:34px;height:34px;border-radius:9px;font-size:.8rem}
+.docs-link{color:#167344;font-size:.83rem;text-decoration:none;font-weight:800;padding-top:7px}
+.docs-panel{background:#f3faf4;border-top:1px solid #d8e9d9;padding:17px}
+.docs-panel:target{display:block}
+.docs-panel h4{color:#1d5e3a}
+.docs-close{color:#1d7446}
+#latest-updates{width:100%;max-width:none;background:linear-gradient(180deg,#fff8ed,#f8fcf8);border-top:1px solid #f0e4d4;border-bottom:1px solid #dceadd}
+#latest-updates>.section-heading,#latest-updates>.updates-shell{width:min(1120px,calc(100% - 36px));margin-left:auto;margin-right:auto}
+#latest-updates .updates-shell{border:1px solid #e2e7dc;border-top:5px solid #f47b20;box-shadow:0 12px 35px #254d2d10}
+.live-label{color:#1c5e3b}.pulse-dot{background:#1c9c59}
+#refresh-updates{background:#167b47}
+.updates-filters .filter{color:#26553b;border-color:#d4e6d8;background:#f5faf6}
+.updates-filters .filter.active{background:#167b47;border-color:#167b47}
+.update-card{background:#fff;border-color:#dfe9df;border-left:4px solid #f28a31}
+.update-icon{background:#fff0dc}.update-category{color:#16814b}.update-card h3{color:#1b5033}
+.updates-empty{background:#f2f9f3}
+.info{background:#eaf6ed;border-color:#d3e8d7}
+.info h2{color:#1b5738}
+.contact-card{border-color:#d6e7d9;box-shadow:0 3px 12px #20452b0a}
+.contact-card strong{color:#1c5738}
+.contact-card a{color:#147448}
+footer{border-top:4px solid #f47b20;background:#fff;width:100%;padding:25px 18px}
+@media(max-width:1020px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav .brand-wrap{width:100%}.nav a{font-size:.8rem;padding:7px 11px}.service{min-height:230px}}
+@media(max-width:480px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.service-art{min-height:105px}.service-art svg{width:65px;height:65px}.service-info{padding:11px;gap:5px}.service-info h3{font-size:.87rem}.docs-link{font-size:.76rem}.number{width:28px;height:28px;flex-basis:28px}.nav{gap:8px}.brand{font-size:1.08rem}.brand-logo{width:52px;height:52px}.hero{padding-top:26px}}
+
+/* Poster presentation in Government Service saffron-white-green theme */
+.top-poster{width:min(960px,calc(100% - 24px));margin:26px auto 8px;padding:14px;background:#fff;border:2px solid #e9bd7c;border-radius:18px;box-shadow:0 14px 34px #17452b20;text-align:center}
+.top-poster h2{font-size:clamp(1.1rem,2.5vw,1.6rem);color:#195b38;margin:3px 0 14px}
+.top-poster img{display:block;width:100%;height:auto;object-fit:contain;border-radius:9px;background:#f6eedc}
+@media(max-width:760px){.top-poster{width:calc(100% - 20px);margin:18px auto 0;padding:8px;border-radius:12px}.top-poster h2{margin:4px 0 10px}}
+
+/* Updates placed before services, with accessible government-inspired styling */
+#latest-updates{padding:54px 18px 65px;background:linear-gradient(180deg,#fff8ed 0%,#f6fbf6 100%)}
+#latest-updates .section-heading h2{font-size:clamp(1.5rem,3vw,2.2rem)}
+#latest-updates .updates-shell{border-radius:18px}
+#top-poster{margin-top:20px}
+#top-poster img{width:100%;height:auto;object-fit:contain;max-height:none}
+@media(max-width:600px){#latest-updates{padding:35px 12px 48px}#latest-updates .updates-shell{width:100%}}
+
+.notice-info{padding:13px 17px;border-radius:12px;background:#fff8e9;border:1px solid #f3d2a5;color:#75501c;font-size:.94rem;margin-bottom:16px;line-height:1.7}
+.update-card{border-left:4px solid #f47b20}.update-meta{font-weight:600}.updates-filters{gap:9px;flex-wrap:wrap}
+@media(max-width:650px){.notice-info{font-size:.82rem;padding:11px}.updates-filters .filter{font-size:.82rem}}
+</style>
+</head>
+<body>
+<div class="topbar">आपल्या सर्व ऑनलाइन व शासकीय सेवा एकाच ठिकाणी</div>
+<header>
+<nav aria-label="मुख्य मेनू" class="nav"><div class="brand-wrap"><img alt="जाधव मल्टी सर्विसेस लोगो" class="brand-logo" src="logo.jpg"/><div class="brand">जाधव मल्टी सर्विसेस</div></div><a href="#services">आमच्या सेवा</a><a href="#latest-updates">भरती • प्रवेश • परीक्षा सूचना</a><a href="#contact">संपर्क</a></nav><section class="top-poster" id="top-poster"><h2>आमच्या केंद्रातील ऑनलाइन सेवा</h2><img alt="जाधव मल्टी सर्विसेस — ऑनलाइन सेवांची माहिती असलेले मूळ पोस्टर" decoding="async" loading="eager" src="services-poster.jpeg"/></section>
+<div class="hero"><div class="gov-style-tag">आपले डिजिटल सेवा केंद्र • माकणी</div>
+<img alt="जाधव मल्टी सर्विसेस CSC लोगो" class="hero-logo" src="logo.jpg"/>
+<br/>
+<span class="eyebrow">विश्वासार्ह सेवा • सोपी प्रक्रिया</span>
+<h1>जाधव मल्टी सर्विसेस</h1>
+<p>ऑनलाइन अर्ज, ओळखपत्रे, शासकीय दाखले, नोकरी फॉर्म आणि डिजिटल सेवा — एकाच ठिकाणी, माकणी.</p>
+<a class="primary" href="#services">आमच्या सेवा पहा  →</a>
+</div>
+</header>
+<main>
+<section class="section" id="latest-updates"><div class="section-heading"><h2>🔔 Live Recruitment, Admission &amp; Examination Notifications</h2><p>माझी नोकरी व NMK सारख्या माहिती संकेतस्थळांच्या मांडणीचा संदर्भ; सूचना अधिकृत स्रोतांमधून तपासून प्रदर्शित.</p></div><div class="updates-shell"><div class="notice-info">📌 भरती • प्रवेश अर्ज • परीक्षा वेळापत्रक • प्रवेशपत्र • निकाल | अधिकृत स्रोतांमधून मिळालेल्या सूचना. अर्जाची अंतिम तारीख उपलब्ध असेल तेव्हाच दर्शवली जाईल.</div><div class="updates-toolbar"><span class="live-label"><span class="pulse-dot"></span> सूचना फीड</span><span id="updates-timestamp">अद्याप अपडेट नाही</span><button id="refresh-updates" type="button">↻ रिफ्रेश</button></div><div aria-label="सूचना प्रकार" class="updates-filters" role="group"><button class="filter active" data-filter="all" type="button">सर्व सूचना</button><button class="filter" data-filter="भरती" type="button">💼 भरती</button><button class="filter" data-filter="परीक्षा" type="button">📚 परीक्षा</button><button class="filter" data-filter="प्रवेश" type="button">🎓 प्रवेश</button></div><div aria-live="polite" class="updates-list" id="updates-list"><div class="updates-empty">सूचना लोड होत आहेत…</div></div><p class="updates-disclaimer">सूचना फक्त उपलब्ध अधिकृत स्रोतांच्या फीडमधून दाखवल्या जातात. हा स्वतंत्र सेवा केंद्राचा माहिती विभाग आहे; सर्व जाहिराती समाविष्ट असतीलच असे नाही. अंतिम माहिती संबंधित अधिकृत जाहिरातीत तपासा.</p></div></section><section class="section" id="services">
+<div class="section-heading">
+<h2>आमच्या सेवा</h2>
+<p>सेवेच्या चित्रावर क्लिक करून आवश्यक कागदपत्रांची यादी पाहा.</p>
+</div>
+<div class="grid">
+<article class="service"><a aria-label="आधार प्रिंट - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-1" style="--art-color:#1976d2" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><rect height="70" rx="9" width="80" x="20" y="25"></rect><circle cx="45" cy="51" r="11"></circle><path d="M28 77q17-22 34 0M70 45h19M70 57h19M70 69h14"></path></svg></a><div class="service-info"><span class="number">०१</span><h3>आधार प्रिंट</h3><a class="docs-link" href="#docs-1">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-1"><h4>आवश्यक कागदपत्रे</h4><ul><li>आधार क्रमांक किंवा ई-आधार डाउनलोडसाठी आवश्यक माहिती</li><li>नोंदणीकृत मोबाईलवर येणारा OTP (लागू असल्यास)</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="पॅन कार्ड (नवीन / अपडेट) - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-2" style="--art-color:#7c3aed" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><rect height="62" rx="9" width="86" x="17" y="29"></rect><path d="M17 45h86M30 69h28M30 79h40"></path></svg></a><div class="service-info"><span class="number">०२</span><h3>पॅन कार्ड (नवीन / अपडेट)</h3><a class="docs-link" href="#docs-2">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-2"><h4>आवश्यक कागदपत्रे</h4><ul><li>ओळख पुरावा (उदा. आधार कार्ड)</li><li>पत्ता पुरावा</li><li>जन्मतारीख पुरावा (लागू असल्यास)</li><li>फोटो व सही (अर्जाच्या प्रकारानुसार)</li><li>जुने PAN कार्ड / PAN क्रमांक (अपडेटसाठी)</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="मतदार ओळखपत्र (नवीन / अपडेट) - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-3" style="--art-color:#e66a32" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><rect height="76" rx="7" width="70" x="25" y="23"></rect><path d="M43 40l9 9 22-22M40 67h40M40 78h30"></path></svg></a><div class="service-info"><span class="number">०३</span><h3>मतदार ओळखपत्र (नवीन / अपडेट)</h3><a class="docs-link" href="#docs-3">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-3"><h4>आवश्यक कागदपत्रे</h4><ul><li>वयाचा पुरावा</li><li>पत्त्याचा पुरावा</li><li>पासपोर्ट आकाराचा फोटो (लागू असल्यास)</li><li>जुने मतदार कार्ड / EPIC क्रमांक (अपडेटसाठी)</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="शासकीय दाखले - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-4" style="--art-color:#008b8b" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><path d="M35 17h39l15 15v72H35zM74 17v18h15M47 55h29M47 69h29M47 83h20"></path></svg></a><div class="service-info"><span class="number">०४</span><h3>शासकीय दाखले</h3><a class="docs-link" href="#docs-4">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-4"><h4>आवश्यक कागदपत्रे</h4><ul><li>आधार कार्ड / ओळख पुरावा</li><li>पत्त्याचा पुरावा</li><li>संबंधित दाखल्यासाठी लागणारे पुरावे (उदा. उत्पन्न, जात, रहिवास)</li><li>स्वघोषणापत्र / इतर कागदपत्रे (दाखल्यानुसार)</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="फार्मर आयडी - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-5" style="--art-color:#39944a" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><path d="M60 102V60M60 70Q33 68 30 39q30 0 30 31M60 58q1-28 30-31 0 28-30 31M42 104h36"></path></svg></a><div class="service-info"><span class="number">०५</span><h3>फार्मर आयडी</h3><a class="docs-link" href="#docs-5">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-5"><h4>आवश्यक कागदपत्रे</h4><ul><li>आधार कार्ड</li><li>आधारशी जोडलेला मोबाईल क्रमांक (OTP साठी, लागू असल्यास)</li><li>शेतजमिनीचा ७/१२ व ८-अ उतारा किंवा जमीन तपशील (लागू असल्यास)</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="ॲडमिशन फॉर्म - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-6" style="--art-color:#7c56d9" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><path d="M13 45l47-23 47 23-47 23zM32 58v21q28 20 56 0V58M107 45v31"></path></svg></a><div class="service-info"><span class="number">०६</span><h3>ॲडमिशन फॉर्म</h3><a class="docs-link" href="#docs-6">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-6"><h4>आवश्यक कागदपत्रे</h4><ul><li>विद्यार्थ्याचे आधार कार्ड</li><li>मागील वर्षाची गुणपत्रिका</li><li>शाळा सोडल्याचा दाखला / TC (लागू असल्यास)</li><li>जात / उत्पन्न / रहिवासी दाखला (लागू असल्यास)</li><li>फोटो व सही</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="शेतकरी योजना फॉर्म - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-7" style="--art-color:#56852d" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><circle cx="39" cy="86" r="12"></circle><circle cx="87" cy="86" r="12"></circle><path d="M18 76h24V47h28l13 18h16v11M50 47V30h22v17M60 66h18"></path></svg></a><div class="service-info"><span class="number">०७</span><h3>शेतकरी योजना फॉर्म</h3><a class="docs-link" href="#docs-7">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-7"><h4>आवश्यक कागदपत्रे</h4><ul><li>आधार कार्ड</li><li>७/१२ व ८-अ उतारा (योजनेनुसार)</li><li>बँक पासबुक / खाते तपशील</li><li>मोबाईल क्रमांक</li><li>योजनेनुसार इतर पात्रता पुरावे</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="नोकरी फॉर्म - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-8" style="--art-color:#c25c36" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><rect height="57" rx="6" width="80" x="20" y="41"></rect><path d="M45 41V29h30v12M20 62h80M57 59h6"></path></svg></a><div class="service-info"><span class="number">०८</span><h3>नोकरी फॉर्म</h3><a class="docs-link" href="#docs-8">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-8"><h4>आवश्यक कागदपत्रे</h4><ul><li>आधार कार्ड / ओळखपत्र</li><li>शैक्षणिक प्रमाणपत्रे व गुणपत्रिका</li><li>फोटो व सही</li><li>जात / नॉन-क्रीमी लेयर / इतर प्रमाणपत्रे (लागू असल्यास)</li><li>मोबाईल व ई-मेल</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="महिला सक्षमीकरण योजना - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-9" style="--art-color:#cf4d89" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><circle cx="43" cy="43" r="13"></circle><circle cx="80" cy="46" r="11"></circle><path d="M19 94q0-32 24-32t24 32M65 68q24-10 35 26"></path></svg></a><div class="service-info"><span class="number">०९</span><h3>महिला सक्षमीकरण योजना</h3><a class="docs-link" href="#docs-9">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-9"><h4>आवश्यक कागदपत्रे</h4><ul><li>आधार कार्ड</li><li>बँक पासबुक / खाते तपशील</li><li>रहिवासी / उत्पन्न पुरावा (योजनेनुसार)</li><li>पासपोर्ट फोटो</li><li>योजनेच्या पात्रतेनुसार अतिरिक्त कागदपत्रे</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="पासपोर्ट फोटो - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-10" style="--art-color:#a54b9e" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><rect height="63" rx="8" width="90" x="15" y="35"></rect><circle cx="60" cy="67" r="22"></circle><circle cx="60" cy="67" r="10"></circle><path d="M34 35l7-12h29l8 12M88 48h5"></path></svg></a><div class="service-info"><span class="number">१०</span><h3>पासपोर्ट फोटो</h3><a class="docs-link" href="#docs-10">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-10"><h4>आवश्यक कागदपत्रे</h4><ul><li>फोटो काढण्यासाठी व्यक्तीची उपस्थिती</li><li>विशिष्ट फोटो आकार किंवा पार्श्वभूमीची आवश्यकता असल्यास माहिती</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="Xerox (काळा-पांढरा व रंगीत) - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-11" style="--art-color:#4878a7" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><rect height="39" rx="4" width="64" x="28" y="18"></rect><rect height="47" rx="6" width="84" x="18" y="51"></rect><path d="M32 76h56v28H32zM84 65h5M38 88h44"></path></svg></a><div class="service-info"><span class="number">११</span><h3>Xerox (काळा-पांढरा व रंगीत)</h3><a class="docs-link" href="#docs-11">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-11"><h4>आवश्यक कागदपत्रे</h4><ul><li>झेरॉक्ससाठी मूळ कागदपत्र किंवा स्पष्ट प्रत</li><li>रंगीत / काळा-पांढरा व प्रतींची संख्या</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="बस तिकीट बुकिंग - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-12" style="--art-color:#c06a26" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><rect height="65" rx="11" width="84" x="18" y="27"></rect><path d="M18 62h84M37 40h18M68 40h18"></path><circle cx="38" cy="93" r="8"></circle><circle cx="84" cy="93" r="8"></circle></svg></a><div class="service-info"><span class="number">१२</span><h3>बस तिकीट बुकिंग</h3><a class="docs-link" href="#docs-12">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-12"><h4>आवश्यक कागदपत्रे</h4><ul><li>प्रवासाचे ठिकाण व तारीख</li><li>प्रवाशांचे नाव, वय व मोबाईल क्रमांक</li><li>सवलतीसाठी ओळखपत्र / पात्रता पुरावा (लागू असल्यास)</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="तहसील दाखले - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-13" style="--art-color:#5276a0" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5" viewbox="0 0 120 120"><path d="M14 45l46-25 46 25M25 48h70M30 54v38M50 54v38M70 54v38M90 54v38M20 98h80"></path></svg></a><div class="service-info"><span class="number">१३</span><h3>तहसील दाखले</h3><a class="docs-link" href="#docs-13">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-13"><h4>आवश्यक कागदपत्रे</h4><ul><li>आधार कार्ड / ओळखपत्र</li><li>पत्त्याचा पुरावा</li><li>७/१२, ८-अ, उत्पन्न, जात किंवा इतर संबंधित पुरावे (दाखल्यानुसार)</li><li>आवश्यक स्वघोषणापत्र (लागू असल्यास)</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+<article class="service"><a aria-label="EPFO सेवा (पीएफ / UAN) - आवश्यक कागदपत्रे पाहा" class="service-art service-link" href="#docs-14" style="--art-color:#155b9b" title="आवश्यक कागदपत्रे पाहा"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewbox="0 0 120 120"><rect height="87" rx="10" width="82" x="19" y="17"></rect><path d="M34 35h52M34 47h52M34 83h52"></path><circle cx="60" cy="66" fill="white" r="15"></circle><text fill="currentColor" font-family="Arial,sans-serif" font-size="16" font-weight="bold" stroke="none" text-anchor="middle" x="60" y="72">PF</text></svg></a><div class="service-info"><span class="number">१४</span><h3>EPFO सेवा (पीएफ / UAN)</h3><a class="docs-link" href="#docs-14">कागदपत्रांची यादी  →</a></div><section class="docs-panel" id="docs-14"><h4>आवश्यक कागदपत्रे</h4><ul><li>UAN क्रमांक / PF खाते तपशील</li><li>आधारशी जोडलेला मोबाईल (OTP साठी, लागू असल्यास)</li><li>बँक खाते तपशील / पासबुक</li><li>PAN तपशील (लागू असल्यास)</li><li>नोकरी / सेवा तपशील व दावा प्रकारानुसार आवश्यक कागदपत्रे</li></ul><p class="docs-note">ही सामान्य मार्गदर्शक यादी आहे. अर्जाचा प्रकार, योजना आणि शासकीय नियमांनुसार कागदपत्रे बदलू शकतात.</p><a class="docs-close" href="#services">बंद करा ×</a></section></article>
+</div>
+</section>
+<section class="info" id="contact">
+<div class="info-inner">
+<h2>जाधव मल्टी सर्विसेस</h2>
+<p>बस स्टँड समोर, छ. शिवाजी महाराज चौक,<br/>लोहारा रोड, माकणी</p>
+<p style="margin-top:16px">
+<a class="primary" href="https://maps.app.goo.gl/RoTjgxXUsyppnkNC7" rel="noopener" target="_blank">
+            📍 Google Maps वर लोकेशन पाहा
+          </a>
+</p>
+<div class="contact-grid">
+<div class="contact-card">
+<strong>संपर्क क्रमांक</strong>
+<a href="tel:9970570675">9970570675</a>
+<a href="tel:9511211648">9511211648</a>
+</div>
+<div class="contact-card">
+<strong>WhatsApp</strong>
+<a href="https://wa.me/919970570675" rel="noopener" target="_blank">9970570675 वर मेसेज करा</a>
+</div>
+<div class="contact-card">
+<strong>ई-मेल</strong>
+<a href="mailto:jadhav.multiservices2026@gmail.com">jadhav.multiservices2026@gmail.com</a>
+</div>
+<div class="contact-card">
+<strong>Instagram</strong>
+<a href="https://www.instagram.com/jadhav_multiservices2026/" rel="noopener" target="_blank">@jadhav_multiservices2026</a>
+</div>
+</div>
+<a class="primary contact-button" href="https://wa.me/919970570675" rel="noopener" target="_blank">WhatsApp वर संपर्क करा</a>
+</div>
+</section>
+</main>
+<footer>© <span id="year"></span> आपले ऑनलाइन सेवा केंद्र. सर्व हक्क राखीव.</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>(function(){
+const list=document.getElementById('updates-list');
+const stamp=document.getElementById('updates-timestamp');
+const filters=[...document.querySelectorAll('.updates-filters .filter')];
+let items=[],active='all';
+const icons={'भरती':'💼','फॉर्म':'📝','प्रवेश':'🎓','ॲडमिशन':'🎓','परीक्षा':'📚','Examination':'📚','Admission':'🎓','योजना':'📋'};
+function el(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=String(txt);return n}
+function render(){list.replaceChildren();const visible=items.filter(x=>active==='all'||(active==='प्रवेश'&&['प्रवेश','ॲडमिशन','Admission'].includes(x.category))||(active==='परीक्षा'&&['परीक्षा','Examination','Exam'].includes(x.category))||x.category===active);
+if(!visible.length){list.append(el('div','updates-empty',items.length?'या प्रकारच्या सूचना सध्या उपलब्ध नाहीत.':'सध्या कोणतीही नवीन सूचना प्रकाशित केलेली नाही. कृपया नंतर पुन्हा तपासा.'));return}
+for(const x of visible){const card=el('article','update-card');const head=el('div','update-head');head.append(el('span','update-icon',icons[x.category]||'🔔'));
+const h=el('div');h.append(el('div','update-category',x.category||'सूचना'),el('h3','',x.title||'नवीन सूचना'));head.append(h);card.append(head);
+if(x.description)card.append(el('p','',x.description));
+if(x.lastDate)card.append(el('div','update-meta','अंतिम तारीख: '+x.lastDate));
+if(x.publishedAt)card.append(el('div','update-meta','प्रकाशित: '+x.publishedAt));
+list.append(card)}}
+async function load(){try{const r=await fetch('notifications.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Feed unavailable');const data=await r.json();if(!Array.isArray(data))throw Error('Invalid feed');items=data.filter(x=>x&&typeof x==='object');stamp.textContent='शेवटचे तपासले: '+new Date().toLocaleTimeString('mr-IN');render()}catch(e){items=[];stamp.textContent='सूचना फीड उपलब्ध नाही';list.replaceChildren(el('div','updates-empty','सध्या सूचना लोड करता आल्या नाहीत. कृपया नंतर पुन्हा प्रयत्न करा.'))}}
+filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.classList.toggle('active',x===b));render()}));
+document.getElementById('refresh-updates').addEventListener('click',load);load();setInterval(load,300000);
+})();</script></body>
+</html>
