@@ -1,0 +1,70 @@
+[
+  {
+    "name": "MPSC",
+    "url": "https://mpsc.gov.in/",
+    "categories": [
+      "भरती",
+      "परीक्षा"
+    ]
+  },
+  {
+    "name": "UPSC",
+    "url": "https://upsc.gov.in/",
+    "categories": [
+      "भरती",
+      "परीक्षा"
+    ]
+  },
+  {
+    "name": "SSC",
+    "url": "https://ssc.gov.in/",
+    "categories": [
+      "भरती",
+      "परीक्षा"
+    ]
+  },
+  {
+    "name": "Maharashtra Police",
+    "url": "https://www.mahapolice.gov.in/",
+    "categories": [
+      "भरती"
+    ]
+  },
+  {
+    "name": "National Testing Agency (NTA)",
+    "url": "https://www.nta.ac.in/",
+    "categories": [
+      "परीक्षा",
+      "प्रवेश"
+    ]
+  },
+  {
+    "name": "Maharashtra CET Cell",
+    "url": "https://cetcell.mahacet.org/",
+    "categories": [
+      "प्रवेश",
+      "परीक्षा"
+    ]
+  },
+  {
+    "name": "JoSAA",
+    "url": "https://josaa.nic.in/",
+    "categories": [
+      "प्रवेश"
+    ]
+  },
+  {
+    "name": "Maharashtra DTE",
+    "url": "https://dte.maharashtra.gov.in/",
+    "categories": [
+      "प्रवेश"
+    ]
+  },
+  {
+    "name": "Maharashtra State Board",
+    "url": "https://mahahsscboard.in/",
+    "categories": [
+      "परीक्षा"
+    ]
+  }
+]
